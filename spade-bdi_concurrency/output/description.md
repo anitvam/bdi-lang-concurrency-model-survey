@@ -3,6 +3,8 @@ It seems that each agent runs on the main thread, but there's no notion of envir
 
 Spade BDI is a wrapper of Spade, and it inherits all his model definitions. 
 Spade runs its agents as asynchronous task on a Event Loop, and there's no way to customize this behaviour.
+source, the agent entity definition: https://github.com/javipalanca/spade/blob/master/spade/agent.py
+
 
 The output I get from the execution of basic.py is ideed:
 ```<_MainThread(MainThread, started 139983526070080)>```
