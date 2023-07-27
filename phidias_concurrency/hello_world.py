@@ -9,7 +9,13 @@ from threading import current_thread
 
 class say_hello(Procedure): pass
 
-say_hello() >> [ print(current_thread())]
+def thread():
+    return current_thread()
+
+
+say_hello() >> [ show_line("Value: ", thread()) ]
+
+
 
 PHIDIAS.run()
 PHIDIAS.shell(globals())
