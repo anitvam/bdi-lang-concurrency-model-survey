@@ -1,4 +1,4 @@
-// Agent bob in project jason_concurrency
+// Agent alice in project jason_concurrency
 
 /* Initial beliefs and rules */
 
@@ -8,4 +8,4 @@
 
 /* Plans */
 
-+!start : true <- thread.
++!start : true <- .ThreadAction.

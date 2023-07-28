@@ -14,12 +14,17 @@ MAS jason_concurrency {
 
     //infrastructure: Jade
     //infrastructure: Local
+    //infrastructure: Local(threaded)
     //infrastructure: Local(pool)
+    infrastructure: Local(synch_scheduled,1)
 
 
     environment: example.Env()
-    agents: bob;
-            alice;
+    agents:
+        bob
+            agentClass CustomAgent;
+        alice
+            agentClass CustomAgent;
 
     aslSourcePath: "src/agt";
 }
