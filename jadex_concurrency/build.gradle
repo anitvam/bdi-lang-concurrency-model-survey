@@ -1,13 +1,17 @@
-defaultTasks 'run'
-
+plugins {
+    id "application"
+}
 apply plugin: 'java'
-
+application {
+    mainClass = "jadex.bdi.examples.startandstop.GreetingsExample"
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.activecomponents.jadex:jadex-distribution-minimal:4.0.267'
+    implementation 'org.activecomponents.jadex:jadex-distribution-standard:4.0.267'
 }
+
 
