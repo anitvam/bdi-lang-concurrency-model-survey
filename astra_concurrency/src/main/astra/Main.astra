@@ -1,0 +1,9 @@
+agent Main {
+    module System system;
+
+
+    rule +!main(list args) {
+        system.createAgent("Alice", "Printer");
+        system.createAgent("Bob", "Printer");
+    }
+}
