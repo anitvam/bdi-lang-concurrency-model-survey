@@ -10,3 +10,6 @@ build
 #Ignore Jadex files
 **/settings_*
 platform_auto.conf
+
+
+**/bin

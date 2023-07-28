@@ -12,8 +12,12 @@
 
 MAS jason_concurrency {
 
-    environment: example.Env()
+    //infrastructure: Jade
+    //infrastructure: Local
+    //infrastructure: Local(pool)
 
+
+    environment: example.Env()
     agents: bob;
             alice;
 
