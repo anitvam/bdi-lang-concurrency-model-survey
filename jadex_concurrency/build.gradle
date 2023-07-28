@@ -1,0 +1,13 @@
+defaultTasks 'run'
+
+apply plugin: 'java'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.activecomponents.jadex:jadex-distribution-minimal:4.0.267'
+}
+
