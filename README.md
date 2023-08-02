@@ -9,13 +9,15 @@ This repository is a collection of notable BDI programming languages and/or libr
 
 ## Concurrency model
 
-Informal insight: "how agents activities are scheduled onto threads".
-
-Nomenclature: each agent has a control loop, that is cycle where, at each iteration, the following stages are performed:
+Assumption: each agent has a control loop, that is cycle where, at each iteration, the following stages are performed:
 1. perception
 2. deliberation
 3. action
 Overall, the control loop of an agent may, in turn, carry on multiple concurrent courses of actions (i.e. intentions) via cooperative scheduling.
+
+Informal insights:
+- **external** concurrency model: "how agents' control loops (stages) are scheduled onto threads"
+- **internal** concurrency model: "how an agent's intentions are scheduled onto threads"
 
 What is a thread?
 To us, it's the elementary unit of control flow, meaning that every computational activity performed by a single thread is sequential, and parallelism can only be attained by spawning multiple threads.
