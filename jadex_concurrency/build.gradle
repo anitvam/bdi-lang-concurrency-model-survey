@@ -3,7 +3,7 @@ plugins {
 }
 apply plugin: 'java'
 application {
-    mainClass = "jadex.bdi.examples.startandstop.GreetingsExample"
+    mainClass = "jadex.bdi.examples.helloworld.BobAgent"
 }
 
 repositories {
