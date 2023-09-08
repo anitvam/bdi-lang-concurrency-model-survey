@@ -1,14 +1,16 @@
 !send_ping.
 
 +!send_ping <-
-    jia.revealCurrentThread(1);
+    jia.revealCurrentThread(11);
     .send(pong, tell, ball);
-    !!showThread(2);
-    jia.revealCurrentThread(1).
+    !!showThread(12);
+    jia.revealCurrentThread(11).
 
 
-+ball <-
-    !!showThread(4);
-    jia.revealCurrentThread(3).
++ball[source(Sender)] <-
+    !!showThread(14);
+    jia.revealCurrentThread(13);
+    -ball[source(Sender)];
+    .send(Sender, tell, ball).
 
 +!showThread(X) <- jia.revealCurrentThread(X).

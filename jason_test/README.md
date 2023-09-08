@@ -1,2 +1,4 @@
-The executor is inside of the agent: https://github.com/jason-lang/jason/blob/develop/jason-interpreter/src/main/java/jason/asSemantics/Agent.java
+The executor service is inside the agent architecture, which memorizes the entities that are executed in the system.
+
+path is /jason-interpreter/.../jason/infra/local
 
