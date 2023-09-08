@@ -1,16 +1,17 @@
+package jia;
+
 import jason.asSemantics.DefaultInternalAction;
 import jason.asSemantics.InternalAction;
 import jason.asSemantics.TransitionSystem;
 import jason.asSemantics.Unifier;
 import jason.asSyntax.Term;
-import jason.stdlib.println;
 
-public class ThreadAction extends DefaultInternalAction {
+public class thread extends DefaultInternalAction {
 
     private static InternalAction singleton = null;
     public static InternalAction create() {
         if (singleton == null)
-            singleton = new ThreadAction();
+            singleton = new thread();
         return singleton;
     }
 
@@ -19,4 +20,5 @@ public class ThreadAction extends DefaultInternalAction {
         System.out.println("My thread is " + Thread.currentThread().getName());
         return true;
     }
+
 }

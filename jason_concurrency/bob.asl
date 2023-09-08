@@ -8,4 +8,4 @@
 
 /* Plans */
 
-+!start : true <- .thread.
++!start : true <- jia.thread.

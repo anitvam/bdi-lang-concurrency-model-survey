@@ -18,13 +18,9 @@ MAS jason_concurrency {
     //infrastructure: Local(pool)
     infrastructure: Local(synch_scheduled,1)
 
-
-    environment: example.Env()
     agents:
-        bob
-            agentClass CustomAgent;
-        alice
-            agentClass CustomAgent;
+        bob;
+        alice;
 
     aslSourcePath: "src/agt";
 }
