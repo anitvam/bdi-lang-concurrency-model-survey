@@ -10,7 +10,7 @@ agent Printer {
       }
 
         rule +!test(int target) {
-            console.print(target);
+            console.print(target, system.name());
             system.terminate();
         }
   }

@@ -9,8 +9,8 @@ public class CustomConsole extends Module {
     }
 
     @ACTION
-    public boolean print(int value) {
-        System.out.println("The Plan " + value + " is executed on thread " + Thread.currentThread().getName());
+    public boolean print(int value, String name) {
+        System.out.println("[" + name + "] The Plan " + value + " is executed on thread " + Thread.currentThread().getName());
         return true;
     }
 }

@@ -3,7 +3,29 @@ agent Main {
 
 
     rule +!main(list args) {
+
+        // Multiple agent - cached executor service (Fork-Join pool)
+        //system.setSchedulingStrategy("astra.execution.FairSchedulerStrategy");
+
+        // Multiple agent - one thread
+        //system.setSchedulingStrategy("astra.execution.BasicSchedulerStrategy");
+        //system.setSchedulePoolSize(1);
+
+        system.setSchedulingStrategy("astra.execution.AdaptiveSchedulerStrategy");
+
+        // Multiple agent - multiple thread
+        //system.setSchedulingStrategy("astra.execution.BasicSchedulerStrategy");
+        //system.setSchedulePoolSize(3);
+
+        system.setSchedulingStrategy("astra.execution.AdaptiveSchedulerStrategy");
+        
+
+
+        
+        
         system.createAgent("Alice", "Printer");
         system.createAgent("Bob", "Printer");
+        system.createAgent("Carl", "Printer");
+
     }
 }
