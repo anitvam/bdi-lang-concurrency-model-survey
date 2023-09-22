@@ -1,2 +1,2 @@
-spade==3.3.0
+spade==3.3.2
 spade_bdi==0.3.0
