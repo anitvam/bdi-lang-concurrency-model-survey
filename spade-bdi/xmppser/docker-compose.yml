@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  xmpp-service:
+    # https://github.com/processone/docker-ejabberd/tree/master/ecs#readme
+    image: ejabberd/ecs:latest
+    platform: linux/amd64
+    environment:
+      - CTL_ON_CREATE=register admin localhost password
+      - CTL_ON_START=registered_users localhost ; status
+    init: true
+    healthcheck:
+      test: [ 'CMD-SHELL',  'bin/ejabberdctl status | grep -q "is started with status: started"' ]
+      interval: 10s
+      timeout: 1s
+      retries: 5
+      start_period: 10s
+    ports:
+      - "5222:5222"
+      - "5269:5269"
+      - "5280:5280"
+      - "5443:5443"
+    volumes:
+      - ./.ejabberd/config.yaml:/home/ejabberd/conf/ejabberd.yml:ro
+#      - ./.ejabberd/db:/home/ejabberd/database
