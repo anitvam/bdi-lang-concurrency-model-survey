@@ -5,7 +5,6 @@
   ],
   "assignees": ["anitvam"],
   "pyenv": {"enable": false},
-  "pysetup": {"enabled": false},
   "ignorePaths": [
     "**/requirements.txt",
     "requirements.txt"
