@@ -17,7 +17,7 @@ class showThread(Procedure): pass
 
 class revealCurrentThread(Action):
     def execute(self, *args):
-        print(str(args[0]) + " is executed on the thread named " + str(current_thread()))
+        print("Intention " + str(args[0]) + " is executed on the thread named " + str(current_thread()))
 
 def_vars("A", "X")
 
@@ -25,16 +25,16 @@ def_vars("A", "X")
 class ponger(Agent):
 
     def main(self):
-        +request(X)[{'from': A}] >> [revealCurrentThread("[Ponger] intention 1"), +reply(X)[{'to': A}], showThread("2"), revealCurrentThread("[Ponger] intention 1")]
-        showThread(X) >> [ revealCurrentThread("[Ponger] intention " , X, "?") ]
+        +request(X)[{'from': A}] >> [revealCurrentThread("1"), +reply(X)[{'to': A}], showThread("2"), revealCurrentThread("1")]
+        showThread(X) >> [ revealCurrentThread(X) ]
 
 
 class main(Agent):
 
     def main(self):
-        ping(X) >> [ revealCurrentThread("[Pinger] intention 1"), +request(X)[{'to': 'ponger@127.0.0.1'}], showThread(2), revealCurrentThread("[Pinger] intention 1") ]
-        showThread(X) >> [ revealCurrentThread("[Pinger] intention ", X, "?") ]
-        +reply(X)[{'from': A}] >> [ showThread(4), revealCurrentThread("[Pinger] intention 3") ]
+        ping(X) >> [ revealCurrentThread("1"), +request(X)[{'to': 'ponger@127.0.0.1'}], showThread("2"), revealCurrentThread("1") ]
+        showThread(X) >> [ revealCurrentThread(X) ]
+        +reply(X)[{'from': A}] >> [ showThread("4"), revealCurrentThread("3") ]
 
 
 if sys.argv[1] == "--ponger":
