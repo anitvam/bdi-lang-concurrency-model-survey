@@ -4,7 +4,6 @@
     "github>DanySK/renovate-config:kotlin"
   ],
   "assignees": ["anitvam"],
-  "pyenv": {"enable": false},
   "ignorePaths": [
     "**/requirements.txt",
     "requirements.txt"
