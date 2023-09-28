@@ -5,7 +5,7 @@ import asyncio
 import spade
 from spade_bdi.bdi import BDIAgent
 
-class Pinger(BDIAgent):
+class PrintingAgent(BDIAgent):
     def add_custom_actions(self, actions):
         @actions.add(".revealCurrentThread", 1)
         def _revealCurrentThread(agent, term, intention):
@@ -13,15 +13,11 @@ class Pinger(BDIAgent):
             yield
 
 async def main():
-    pinger_jid = os.getenv('JID_PINGER')
-    ponger_jid = os.getenv('JID_PONGER')
-    password = os.getenv('XMPP_PASS')
-
-    #a = Pinger(pinger_jid, password, "pinger.asl")
-    a = Pinger("pinger@localhost", "password", "pinger.asl")
+    a = PrintingAgent("pinger@localhost", "password", "pinger.asl")
     a.bdi.set_belief("receiver", "ponger")
+    b = PrintingAgent("ponger@localhost", "password", "ponger.asl")
 
-
+    await b.start()
     await a.start()
     await asyncio.sleep(5)
     #await a.stop()
