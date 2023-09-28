@@ -5,6 +5,8 @@
   ],
   "assignees": ["anitvam"],
   "ignorePaths": [
+    "**/.python-version",
+    ".python-version",
     "**/requirements.txt",
     "requirements.txt"
   ]
