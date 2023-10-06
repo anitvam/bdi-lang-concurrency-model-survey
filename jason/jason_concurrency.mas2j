@@ -15,16 +15,17 @@ MAS jason_concurrency {
     //infrastructure: Jade
     //infrastructure: Local
     //infrastructure: Local(threaded)
-    infrastructure: Local(pool,1)
+
+    infrastructure: Local(pool)
     //infrastructure: Local(synch_scheduled,4)
     //infrastructure: Centralized
 
     agents:
-       // ping pinger;
-        //pong ponger;
-        helloworld helloworld;
-        helloworld helloworld1;
-        helloworld helloworld3;
+        pinger pinger;
+        ponger ponger;
+        //helloworld helloworld;
+        //helloworld helloworld1;
+        //helloworld helloworld3;
 
 
     aslSourcePath: "src/main/asl";

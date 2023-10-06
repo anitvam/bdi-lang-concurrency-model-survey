@@ -1,16 +1,22 @@
 !send_ping.
 
+
+
 +!send_ping <-
-    jia.revealCurrentThread(11);
-    .send(pong, tell, ball);
-    !!showThread(12);
-    jia.revealCurrentThread(11).
+    .my_name(N);
+    jia.revealCurrentThread(N, 1);
+    .send(ponger, tell, ball);
+    !!showThread(2);
+    jia.revealCurrentThread(N, 1).
 
 
 +ball[source(Sender)] <-
-    !!showThread(14);
-    jia.revealCurrentThread(13);
-    -ball[source(Sender)];
-    .send(Sender, tell, ball).
+    !!showThread(4);
+    .my_name(N);
+    jia.revealCurrentThread(N, 3).
+    //-ball[source(Sender)];
+    //.send(Sender, tell, ball).
 
-+!showThread(X) <- jia.revealCurrentThread(X).
++!showThread(X) <- 
+    .my_name(N);
+    jia.revealCurrentThread(N, X).
