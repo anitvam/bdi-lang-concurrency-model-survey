@@ -13,4 +13,10 @@ public class CustomConsole extends Module {
         System.out.println("[" + name + "] The Plan " + value + " is executed on thread " + Thread.currentThread().getName());
         return true;
     }
+
+    @ACTION
+    public boolean revealCurrentThread(int value) {
+        System.out.println("intention " + value +  " is executed on thread " + Thread.currentThread().getName());
+        return true;
+    }
 }

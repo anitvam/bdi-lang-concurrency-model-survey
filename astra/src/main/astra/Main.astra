@@ -17,15 +17,14 @@ agent Main {
         //system.setSchedulingStrategy("astra.execution.BasicSchedulerStrategy");
         //system.setSchedulePoolSize(3);
 
-        system.setSchedulingStrategy("astra.execution.AdaptiveSchedulerStrategy");
+        //system.setSchedulingStrategy("astra.execution.AdaptiveSchedulerStrategy");
         
 
 
         
         
-        system.createAgent("Alice", "Printer");
-        system.createAgent("Bob", "Printer");
-        system.createAgent("Carl", "Printer");
+        system.createAgent("Pinger", "Pinger");
+        system.createAgent("Ponger", "Ponger");
 
     }
 }

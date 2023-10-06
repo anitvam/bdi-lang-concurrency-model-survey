@@ -1,0 +1,20 @@
+agent Ponger {
+    module System system;
+    module CustomConsole console;
+
+    types message {
+        formula message(string);
+    }
+
+    rule @message(request, string sender, message(string value)) {
+		console.revealCurrentThread(5);
+        !showThread(6);
+        console.revealCurrentThread(5);
+        send(request, sender, message(value) );
+
+	}
+
+    rule +!showThread(int target) {
+        console.revealCurrentThread(target);
+    }
+  }

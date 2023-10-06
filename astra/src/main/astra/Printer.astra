@@ -1,16 +1,16 @@
 agent Printer {
-      module System system;
-      module CustomConsole console;
+    module System system;
+    module CustomConsole console;
 
-      initial !init();
+    initial !init();
 
-      rule +!init() {
-          !test(1);
-          !test(2);
-      }
+    rule +!init() {
+        !test(1);
+        !test(2);
+    }
 
-        rule +!test(int target) {
-            console.print(target, system.name());
-            system.terminate();
-        }
+    rule +!test(int target) {
+        console.print(target, system.name());
+        system.terminate();
+    }
   }

@@ -1,0 +1,26 @@
+agent Pinger {
+    module System system;
+    module CustomConsole console;
+
+    initial !ping();
+
+    types message {
+        formula message(string);
+    }
+
+    rule +!ping() {
+        console.revealCurrentThread(1);
+        send(request, "Ponger", message("ball") );
+        !showThread(2);
+        console.revealCurrentThread(1);
+    }
+
+    rule @message(request, string sender, message(string value)) {
+		!showThread(4);
+        console.revealCurrentThread(3);
+	}
+
+    rule +!showThread(int target) {
+        console.revealCurrentThread(target);
+    }
+  }
