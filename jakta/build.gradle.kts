@@ -7,6 +7,7 @@
 
 plugins {
     kotlin("jvm") version "1.9.10"
+    id("application")   
 }
 
 repositories {
@@ -14,5 +15,16 @@ repositories {
 }
 
 dependencies {
-    implementation("it.unibo.jakta:jakta-dsl:0.7.4")
+    implementation("it.unibo.jakta:jakta-dsl:0.8.20")
+}
+
+application {
+    mainClass = "it.unibo.jakta.testing.Main"  
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+        vendor.set(JvmVendorSpec.ADOPTIUM)
+    }
 }
