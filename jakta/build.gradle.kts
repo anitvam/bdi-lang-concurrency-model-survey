@@ -21,10 +21,3 @@ dependencies {
 application {
     mainClass = "it.unibo.jakta.testing.Main"  
 }
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
-        vendor.set(JvmVendorSpec.ADOPTIUM)
-    }
-}
