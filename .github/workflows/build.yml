@@ -47,8 +47,8 @@ jobs:
       - name: Build Phidias
         run: |
           cd phidias
-          python -m py_compile '*.py'
+          python -m py_compile "*.py"
       - name: Build Spade-BDI
         run: |
           cd spade-bdi
-          python -m py_compile '*.py'
+          python -m py_compile "*.py"
