@@ -31,7 +31,7 @@ jobs:
       - name: Build Astra
         run: |
           cd astra
-          mvn clean compile astra:deploy
+          mvn compile
       - name: Build Jadex
         run: |
           cd ../jadex

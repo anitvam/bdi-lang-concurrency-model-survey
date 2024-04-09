@@ -11,7 +11,6 @@ agent Ponger {
         !showThread(6);
         console.revealCurrentThread(5);
         send(request, sender, message(value) );
-        system.terminate();
 	}
 
     rule +!showThread(int target) {
