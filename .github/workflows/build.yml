@@ -34,24 +34,21 @@ jobs:
           mvn compile
       - name: Build Jadex
         run: |
-          pwd
-          cd ../
-          pwd
           cd jadex
           ./gradlew build
       - name: Build Jakta
         run: |
-          cd ../jakta
+          cd jakta
           ./gradlew build
       - name: Build Jason
         run: |
-          cd ../jason
+          cd jason
           ./gradlew build
       - name: Build Phidias
         run: |
-          cd ../phidias
+          cd phidias
           python -m py_compile *.py
       - name: Build Spade-BDI
         run: |
-          cd ../spade-bdi
+          cd spade-bdi
           python -m py_compile *.py
