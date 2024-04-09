@@ -1,3 +1,5 @@
+package it.unibo.jakta.testing
+
 import it.unibo.jakta.agents.bdi.dsl.internalAction
 import it.unibo.jakta.agents.bdi.dsl.mas
 import it.unibo.jakta.agents.bdi.dsl.plans
