@@ -18,7 +18,7 @@ agent Pinger {
     rule @message(request, string sender, message(string value)) {
 		!showThread(4);
         console.revealCurrentThread(3);
-        system.terminate()
+        system.terminate();
 	}
 
     rule +!showThread(int target) {
