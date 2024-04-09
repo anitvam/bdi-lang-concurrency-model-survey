@@ -1,4 +1,4 @@
-The executor service is inside the agent architecture, which memorizes the entities that are executed in the system.
+The executor service is inside the agent architecture, which memorises the entities that are executed in the system.
 
-path is /jason-interpreter/.../jason/infra/local
+path is: /jason-interpreter/.../jason/infra/local
 

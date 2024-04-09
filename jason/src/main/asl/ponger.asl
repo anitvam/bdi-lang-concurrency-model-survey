@@ -1,5 +1,3 @@
-
-
 +ball[source(Sender)] <-
     .my_name(N);
     jia.revealCurrentThread(N, 5);
@@ -12,3 +10,4 @@
 +!showThread(X) <- 
     .my_name(N);
     jia.revealCurrentThread(N, X).
+    

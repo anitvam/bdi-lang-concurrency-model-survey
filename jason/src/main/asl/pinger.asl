@@ -1,14 +1,11 @@
 !send_ping.
 
-
-
 +!send_ping <-
     .my_name(N);
     jia.revealCurrentThread(N, 1);
     .send(ponger, tell, ball);
     !!showThread(2);
     jia.revealCurrentThread(N, 1).
-
 
 +ball[source(Sender)] <-
     !!showThread(4);
