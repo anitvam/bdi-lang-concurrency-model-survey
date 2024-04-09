@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Baiardi"
+  given-names: "Martina"
+  orcid: "https://orcid.org/0009-0001-0799-9166"
+- family-names: "Ciatto"
+  given-names: "Giovanni"
+  orcid: "https://orcid.org/0000-0002-1841-8996"
+title:anitvam/bdi-lang-concurrency-model-survey: v1.0.0
+version: v1.0.0
+date-released: 2024-04-09
+url: "https://github.com/anitvam/bdi-lang-concurrency-model-survey"
