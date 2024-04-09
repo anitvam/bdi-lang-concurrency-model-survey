@@ -1,0 +1,54 @@
+name: CI/CD Process
+on:
+  workflow_dispatch:
+  push: 
+    branches: 
+      - main
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows, macos, ubuntu]
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: adopt
+          java-version: 21
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v3
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: 'spade-bdi/.python-version'
+
+      - name: Build Astra
+        run: |
+          cd astra
+          mvn clean compile astra:deploy
+      - name: Build Jadex
+        run: |
+          cd ../jadex
+          ./gradlew build
+      - name: Build Jakta
+        run: |
+          cd ../jakta
+          ./gradlew build
+      - name: Build Jason
+        run: |
+          cd ../jason
+          ./gradlew build
+      - name: Build Phidias
+        run: |
+          cd ../phidias
+          python -m py_compile *.py
+      - name: Build Spade-BDI
+        run: |
+          cd ../spade-bdi
+          python -m py_compile *.py
