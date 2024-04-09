@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation("it.unibo.jakta:jakta-dsl:0.8.20")
+    implementation("it.unibo.jakta:jakta-dsl:0.8.21")
 }
 
 application {
