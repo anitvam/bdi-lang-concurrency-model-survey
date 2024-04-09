@@ -45,10 +45,12 @@ jobs:
           cd jason
           ./gradlew build
       - name: Build Phidias
+        shell: bash
         run: |
           cd phidias
-          python -m py_compile "*.py"
+          python -m py_compile *.py
       - name: Build Spade-BDI
+        shell: bash
         run: |
           cd spade-bdi
-          python -m py_compile "*.py"
+          python -m py_compile *.py
