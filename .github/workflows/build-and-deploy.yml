@@ -69,7 +69,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: semver
-        uses: anitvam/conventionalcommit-semantic-releasing@v0.7.11
+        uses: anitvam/conventionalcommit-semantic-releasing@v0.7.12
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
   success:
